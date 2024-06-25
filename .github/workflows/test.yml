@@ -5,6 +5,10 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - name: ssh
+    - uses: mxschmitt/action-tmate@v3
+      with:
+        detached: true
     - name: Checkout
       uses: actions/checkout@v4
     - name: Set up MSYS2 MinGW-W64
